@@ -7,6 +7,7 @@ import Translation from './pages/Translation';
 import Itinerary from './pages/Itinerary';
 import LocalInsider from './pages/LocalInsider';
 import Stories from './pages/Stories';
+import Landing from './pages/Landing';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/translation" element={<Translation />} />
           <Route path="/itinerary" element={<Itinerary />} />
