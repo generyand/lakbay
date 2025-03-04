@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import bohol from '../assets/bohol.webp';
 
 const Chat = () => {
   const [messages, setMessages] = useState([
@@ -84,7 +85,7 @@ const Chat = () => {
           type: 'trip',
           content: {
             title: '2-Day Boracay Beach Getaway',
-            image: '/path/to/boracay-image.jpg',
+            image: bohol,
             hotel: 'Gracias Inn Boracay',
             hotelLink: '#',
             description: 'This cozy spot is perfect for you with a solid rating of 8.4 and a great location to soak up the sun and enjoy the beach vibes.',
@@ -103,10 +104,10 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] bg-gray-50 pt-[64px] md:pt-[80px] pb-[76px]">
       {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto px-4 py-4">
-        <div className="max-w-2xl mx-auto">
+      <div className="flex-1 overflow-y-auto">
+        <div className="max-w-3xl mx-auto px-4 py-6">
           {messages.map((message, index) => (
             <MessageBubble
               key={index}
@@ -119,8 +120,8 @@ const Chat = () => {
       </div>
 
       {/* Input Container */}
-      <div className="border-t bg-white">
-        <div className="max-w-2xl mx-auto px-4 py-2">
+      <div className="border-t bg-white fixed bottom-[76px] left-0 right-0">
+        <div className="max-w-3xl mx-auto px-4 py-3">
           <form onSubmit={handleSubmit} className="flex gap-2 items-center">
             <input
               type="text"

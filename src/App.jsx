@@ -10,6 +10,7 @@ import LocalInsider from './pages/LocalInsider';
 import Stories from './pages/Stories';
 import Landing from './pages/Landing';
 import Chat from './pages/Chat';
+import Explore from './pages/Explore';
 
 function App() {
   return (
@@ -20,12 +21,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/landing" element={<Landing />} />
-            <Route path="/recommendations" element={<Recommendations />} />
             <Route path="/translation" element={<Translation />} />
             <Route path="/itinerary" element={<Itinerary />} />
             <Route path="/local-insider" element={<LocalInsider />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/chat" element={<Chat />} />
+            <Route path="/explore" element={<Explore />} />
           </Routes>
         </main>
         <Footer />
