@@ -14,6 +14,7 @@ Lakbay is an intelligent travel assistant that helps you plan, organize, and enh
 - **Real-time Updates**: Stay informed about weather, local events, and travel advisories
 - **Multi-language Support**: Break language barriers with instant translations
 - **Interactive Maps**: Navigate easily with integrated mapping and points of interest
+- **Real-time Translation**: Translate text in real-time
 
 ## Getting Started
 
