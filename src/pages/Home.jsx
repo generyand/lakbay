@@ -18,6 +18,8 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import Philippines from '../assets/philippines.jpg';
 import { useState, useEffect } from 'react';
+import boracay from '../assets/boracay.jpg';
+import palawan from '../assets/palawan.webp';
 
 // Custom hook for animated placeholder with cursor
 function useTypingPlaceholder(phrases, typingSpeed = 100, deletingSpeed = 50, pauseDuration = 2000) {
@@ -202,7 +204,7 @@ function Home() {
         <div className="px-4 mb-8">
           <div className="grid grid-cols-4 gap-4">
             {[
-              { icon: Building2, label: 'Hotels', color: 'bg-blue-500' },
+              { icon: Building2, label: 'Hotels', color: 'bg-amber-500' },
               { icon: Plane, label: 'Flights', color: 'bg-white' }, 
               { icon: MapPin, label: 'Places', color: 'bg-white' },
               { icon: UtensilsCrossed, label: 'Food', color: 'bg-white' }
@@ -276,7 +278,7 @@ function Home() {
               { 
                 name: 'Boracay',
                 location: 'Philippines',
-                image: '/destinations/boracay.jpg',
+                image: boracay,
                 rating: 4.9,
                 price: '$150/night',
                 badge: 'Popular'
@@ -284,7 +286,7 @@ function Home() {
               {
                 name: 'Palawan',
                 location: 'Philippines',
-                image: '/destinations/palawan.jpg',
+                image: palawan,
                 rating: 4.8,
                 price: '$120/night',
                 badge: 'Must Visit'

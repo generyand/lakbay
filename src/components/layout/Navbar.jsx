@@ -23,13 +23,13 @@ function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2">
-            {/* <div className="w-10 h-10 md:w-12 md:h-12 relative">
+            <div className="w-10 h-10 md:w-12 md:h-12 relative">
               <img 
                 src={logo} 
                 alt="Gora Logo" 
                 className="w-full h-full object-contain"
               />
-            </div> */}
+            </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
               GORA
             </span>
@@ -74,7 +74,7 @@ function Navbar() {
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     location.pathname === item.href
                       ? 'text-amber-500 bg-white/[0.08]'
-                      : 'text-white/90 hover:bg-white/[0.06] hover:text-amber-500'
+                      : 'text-black/90 hover:bg-white/[0.06] hover:text-amber-500'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
