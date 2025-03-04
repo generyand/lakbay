@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Sparkles, X, Send, Smile } from 'lucide-react';
-import bohol from '../assets/bohol.webp';
+import boracay from '../assets/boracay.jpg';
 
 const FloatingChat = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,7 +85,7 @@ const FloatingChat = () => {
           type: 'trip',
           content: {
             title: '2-Day Boracay Beach Getaway',
-            image: bohol,
+            image: boracay,
             hotel: 'Gracias Inn Boracay',
             hotelLink: '#',
             description: 'This cozy spot is perfect for you with a solid rating of 8.4 and a great location to soak up the sun and enjoy the beach vibes.',
@@ -115,7 +115,7 @@ const FloatingChat = () => {
           }`}
       >
         {/* Chat Header */}
-        <div className="bg-white px-4 md:px-6 py-4 md:rounded-t-2xl border-b flex items-center justify-between flex-shrink-0">
+        <div className="bg-white px-4 md:px-6 py-4 md:rounded-t-2xl shadow-sm flex items-center justify-between flex-shrink-0">
           <div>
             <h3 className="font-semibold text-gray-800">GORA</h3>
             <p className="text-sm text-gray-500">Ask me anything about travel</p>
@@ -141,7 +141,7 @@ const FloatingChat = () => {
         </div>
 
         {/* Input Container */}
-        <div className="bg-white px-4 py-3 border-t md:rounded-b-2xl flex-shrink-0">
+        <div className="bg-white px-4 py-3 shadow-sm md:rounded-b-2xl flex-shrink-0">
           <form onSubmit={handleSubmit} className="relative flex items-center gap-2">
             <button
               type="button"
@@ -156,7 +156,7 @@ const FloatingChat = () => {
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
                 placeholder="Message AI Travel Assistant..."
-                className="w-full px-4 py-3 bg-gray-50/50 rounded-xl focus:outline-none focus:bg-white focus:ring-2 focus:ring-amber-500/20 border border-gray-100 text-gray-700 placeholder:text-gray-400 transition-all"
+                className="w-full px-4 py-3 bg-gray-50/50 rounded-xl focus:outline-none focus:ring-0 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] focus:shadow-[0_2px_12px_rgba(0,0,0,0.08)] transition-all text-gray-700 placeholder:text-gray-400"
               />
             </div>
 
@@ -172,16 +172,15 @@ const FloatingChat = () => {
       </div>
 
       {/* Floating Button - Updated z-index to match */}
+      {!isOpen && (
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-24 right-4 md:bottom-6 md:right-6 w-12 h-12 md:w-14 md:h-14 bg-amber-500 rounded-full shadow-lg hover:bg-amber-600 transition-all duration-200 flex items-center justify-center z-[100]"
       >
-        {isOpen ? (
-          <X className="w-5 h-5 md:w-6 md:h-6 text-white" />
-        ) : (
+        
           <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white" />
-        )}
       </button>
+      )}
 
       {/* Close Button - Moved outside chat window */}
       {isOpen && (
