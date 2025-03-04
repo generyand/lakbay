@@ -203,7 +203,7 @@ function Home() {
           <div className="grid grid-cols-4 gap-4">
             {[
               { icon: Building2, label: 'Hotels', color: 'bg-blue-500' },
-              { icon: Plane, label: 'Flights', color: 'bg-white' },
+              { icon: Plane, label: 'Flights', color: 'bg-white' }, 
               { icon: MapPin, label: 'Places', color: 'bg-white' },
               { icon: UtensilsCrossed, label: 'Food', color: 'bg-white' }
             ].map((action, i) => (

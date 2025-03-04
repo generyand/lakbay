@@ -9,6 +9,7 @@ import Itinerary from './pages/Itinerary';
 import LocalInsider from './pages/LocalInsider';
 import Stories from './pages/Stories';
 import Landing from './pages/Landing';
+import Chat from './pages/Chat';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/itinerary" element={<Itinerary />} />
             <Route path="/local-insider" element={<LocalInsider />} />
             <Route path="/stories" element={<Stories />} />
+            <Route path="/chat" element={<Chat />} />
           </Routes>
         </main>
         <Footer />
