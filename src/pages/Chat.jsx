@@ -120,21 +120,33 @@ const Chat = () => {
       </div>
 
       {/* Input Container */}
-      <div className="border-t bg-white fixed bottom-[76px] left-0 right-0">
-        <div className="max-w-3xl mx-auto px-4 py-3">
-          <form onSubmit={handleSubmit} className="flex gap-2 items-center">
+      <div className="border-t bg-white/90 backdrop-blur-xl fixed bottom-[76px] left-0 right-0 shadow-[0_-1px_10px_rgba(0,0,0,0.05)]">
+        <div className="max-w-3xl mx-auto px-4 py-4">
+          <form onSubmit={handleSubmit} className="relative flex items-center">
             <input
               type="text"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
-              placeholder="Ask me anything..."
-              className="flex-1 p-3 border rounded-full focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+              placeholder="Message AI Travel Assistant..."
+              className="w-full pl-5 pr-14 py-4 bg-gray-50/80 rounded-2xl focus:outline-none focus:bg-white focus:shadow-md transition-all duration-200 placeholder:text-gray-400 text-gray-700"
             />
             <button
               type="submit"
-              className="bg-amber-500 text-white px-6 py-3 rounded-full hover:bg-amber-600 transition-colors"
+              className="absolute right-2 p-3 bg-amber-500 rounded-xl hover:bg-amber-600 transition-all duration-200 group"
             >
-              Send
+              <svg 
+                className="w-5 h-5 text-white transform rotate-90 group-hover:scale-110 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                />
+              </svg>
             </button>
           </form>
         </div>

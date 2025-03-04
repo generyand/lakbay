@@ -14,7 +14,6 @@ function BottomNav() {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Explore', href: '/explore', icon: Compass },
-    { name: 'Chat', href: '/chat', icon: MessageSquare },
     { name: 'Translate', href: '/translation', icon: Languages },
     { name: 'Profile', href: '/profile', icon: User }
   ];
