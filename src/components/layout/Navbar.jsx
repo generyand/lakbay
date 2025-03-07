@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50">
       {/* Glass Background Effect */}
-      <div className="absolute inset-0 bg-dark/[0.6] backdrop-blur-xl backdrop-saturate-150 border-b border-white/[0.1] shadow-[0_2px_4px_rgba(0,0,0,0.02)]" />
+      <div className="absolute inset-0 bg-dark/[0.9] backdrop-blur-xl backdrop-saturate-150 border-b border-white/[0.1] shadow-[0_2px_4px_rgba(0,0,0,0.02)]" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -30,9 +30,13 @@ function Navbar() {
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+            {/* <span className="text-2xl font-bold bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
               GORA
-            </span>
+            </span> */}
+            <div className="flex items-center">
+              <span className='text-2xl font-bold text-white'>GO</span>
+              <span className='text-2xl font-bold text-amber-500'>RA</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
